@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+    border: 1px solid #C5C5C5;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #666666;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus {
+    border-color: #004C99;
+  }
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+    border: 1px solid #666666;
+    background-color: #004C99;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: filter .2s;
+  }
+
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover {
+    filter: brightness(1.1);
+  }
+
+    button:active,
+    input[type="submit"]:active {
+    background-color: #003366;
+  }
+</style>
+</head>
+<body>
+    <table border="5" width="750" align="center">
+            <tr>
+                <td colspan="2" height="100">
+                    <img src="ejemplos1/imagenes/inmobiliariaLogo.jpg" align="left" width="200" height="140" border="5" alt="Logo Inmobiliaria Punto Casa">
+                    <p><h1>El supertilin</h1><br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="100" align="center" valign="middle">
+                    <a href="ejemplos1/inmueblesAlquiler.html">Alquileres de casas</a>
+                </td>
+                <td rowspan="2"><p align="center">
+                    <h1>El supertilin Inmobiliaria</h1>
+                    <p>En esta inmobiliaria wueremos garantizar el confort del cliente.
+                    <br>
+                    En nuestros mas de 8 años de experiencia demostramos ser la mejor inmobiliaria. 
+                    <br><br>
+                    nosotros venedemos casas de calida con buena ubicacion y tenemos mucha variedad
+                    <br>
+                    Estamos orgullosos de decir que somos la inmobiilaria el supertilin.
+                    <br><br>
+                    Nuestro empleado estrella: Geronimo "MOMO" Benavidez.
+                    <br>
+                    Los dueños de esta exitosa empreza: Tato Dobien y Matienzo Yerbi
+                    <br><br>
+            </td>
+            </tr>
+
+
+            <tr>
+                <td width="100" align="center" valign="middle">
+                    <a href="ejemplos1/inmueblesVenta.html">Comprar casas</a>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" align="center" height="50">
+                    <small>derechos reservados Roberto Carlos</small>
+                </td>
+            </tr>
+        </table>
+
+        <form action="#" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="correo">Correo electrónico:</label><br>
+        <input type="email" id="correo" name="correo"><br><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>

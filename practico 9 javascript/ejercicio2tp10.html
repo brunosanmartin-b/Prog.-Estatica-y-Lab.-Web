@@ -1,0 +1,51 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11 - Date</title>
+</head>
+<body>
+  <h2>Ejercicio 11: Manejo de Fechas</h2>
+  <script>
+    
+    let ahora = new Date();
+    let fechaActual = ahora.toLocaleDateString();
+    let horaActual = ahora.getHours();
+    let minutos = ahora.getMinutes();
+    let segundos = ahora.getSeconds();
+
+    document.write("<p><b>Fecha actual:</b> " + fechaActual + "</p>");
+    document.write("<p><b>Hora actual:</b> " + horaActual + ":" + minutos + ":" + segundos + "</p>");
+
+    
+    let anio = ahora.getFullYear();
+    let navidad = new Date(anio, 11, 25); 
+    if (ahora > navidad) {
+      navidad = new Date(anio + 1, 11, 25);
+    }
+
+    let diferencia = navidad - ahora; 
+    let dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    let horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+    let mins = Math.floor((diferencia / (1000 * 60)) % 60);
+    let segs = Math.floor((diferencia / 1000) % 60);
+
+    document.write("<p><b>Faltan para Navidad:</b> " + dias + " días, " + horas + " horas, " + mins + " minutos y " + segs + " segundos</p>");
+  </script>
+
+  <hr>
+  <h3>Parte b: Calcular edad</h3>
+  <button onclick="calcularEdad()">Calcular Edad</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularEdad() {
+      let nacimiento = prompt("Ingrese su año de nacimiento:");
+      let hoy = new Date();
+      let anioActual = hoy.getFullYear();
+      let edad = anioActual - parseInt(nacimiento);
+
+      document.getElementById("resultado").innerHTML = "Su edad es " + edad;
+    }
+  </script>
+</body>
+</html>

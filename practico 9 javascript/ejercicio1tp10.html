@@ -1,0 +1,50 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9 - String</title>
+</head>
+<body>
+  <h2>Ejercicio 9: Manejo de Strings</h2>
+  <script>
+   
+    let mensaje = prompt("Ingrese un mensaje:");
+
+    
+    document.write("<p><b>Mayúsculas:</b> " + mensaje.toUpperCase() + "</p>");
+
+   
+    document.write("<p><b>Minúsculas:</b> " + mensaje.toLowerCase() + "</p>");
+
+    
+    let subMensaje = mensaje.substring(5, 15); 
+    document.write("<p><b>Sub-mensaje (posición 5, largo 10):</b> " + subMensaje + "</p>");
+
+    
+    if (mensaje.toLowerCase().includes("hola")) {
+      document.write("<p><b>Contiene 'hola':</b> hola que tal</p>");
+    }
+
+    
+    let sinEspacios = mensaje.replace(/\s+/g, "");
+    let sinHola = sinEspacios.replace(/hola/gi, "");
+    document.write("<p><b>Sin espacios y sin 'hola':</b> " + sinHola + "</p>");
+
+   
+    let traducciones = {
+      "my": "mi",
+      "hello": "hola",
+      "name": "nombre",
+      "friend": "amigo",
+      "world": "mundo"
+    };
+
+    let traducido = mensaje;
+    for (let palabra in traducciones) {
+      let regex = new RegExp("\\b" + palabra + "\\b", "gi");
+      traducido = traducido.replace(regex, traducciones[palabra]);
+    }
+
+    document.write("<p><b>Traducción:</b> " + traducido + "</p>");
+  </script>
+</body>
+</html>

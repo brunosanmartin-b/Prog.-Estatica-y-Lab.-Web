@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CHAT</title>
+</head>
+<body>
+  <h2>CHAT</h2>
+
+  <form id="chatForm">
+    <label>Nombre de usuario:</label><br>
+    <input type="text" id="usuario" required><br><br>
+
+    <label>Mensaje:</label><br>
+    <textarea id="mensaje" rows="3" cols="30" required></textarea><br><br>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+  <hr>
+  <h3>Mensajes:</h3>
+  <div id="chatBox" style="border:1px solid black; padding:10px; width:300px; min-height:100px;">
+  </div>
+
+  <script>
+    // Posicionar el cursor en el textarea al cargar la página
+    document.getElementById("mensaje").focus();
+
+    // Capturar envío del formulario
+    document.getElementById("chatForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // evitar recarga de página
+
+      let usuario = document.getElementById("usuario").value;
+      let mensaje = document.getElementById("mensaje").value;
+
+      // Mostrar el mensaje en el chatBox
+      let chatBox = document.getElementById("chatBox");
+      chatBox.innerHTML += "<p><b>" + usuario + ":</b> " + mensaje + "</p>";
+
+      // Limpiar el textarea y volver a enfocar
+      document.getElementById("mensaje").value = "";
+      document.getElementById("mensaje").focus();
+    });
+  </script>
+</body>
+</html>
